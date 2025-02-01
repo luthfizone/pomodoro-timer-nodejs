@@ -1,0 +1,16 @@
+{
+  "name": "pomodoro-timer",
+  "version": "1.0.0",
+  "description": "pomodoro timer give notification for user",
+  "keywords": [
+    "pomodoro",
+    "timer"
+  ],
+  "license": "ISC",
+  "author": "luthfi",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
