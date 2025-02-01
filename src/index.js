@@ -1,5 +1,8 @@
+// dependency
 import nodeNotifier from "node-notifier";
-import moment from "moment";
+
+// helper and instance
+import { formattingTime } from "./helper/format.js";
 import { POMOORO_TIME, BREAK_POMODORO_TIME } from "./instance/time.js";
 
 // initial value of pomodoro is user working (false)
@@ -7,21 +10,6 @@ let isWorking = false;
 
 // initial value of remaining time (0)
 let remainingTime = 0;
-
-/**
- * Format given total second to string "HH:MM:SS" using moment dependency
- *
- * @param {number} totalSecond - total second to be formatted
- * @returns {string} - formatted string
- */
-function formattingTime(totalSecond) {
-  const duration = moment.duration(totalSecond, "seconds");
-  const hours = duration.hours().toString().padStart(2, "0");
-  const minutes = duration.minutes().toString().padStart(2, "0");
-  const seconds = duration.seconds().toString().padStart(2, "0");
-
-  return `${hours}:${minutes}:${seconds}`;
-}
 
 /**
  * Start pomodoro timer (check in every second)
